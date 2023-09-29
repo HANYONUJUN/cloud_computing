@@ -104,7 +104,7 @@ sudo nano /etc/resolv.conf(nameserver는 위와 동일하게 작성)
     $ sudo nano /usr/local/hadoop/etc/hadoop/hdfs-site.xml
 
 ![hdfs-site 설정](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/a5229142-bea5-480e-8daf-bae13c8ef27d)
-<li>dfs.repication의 1의 값은 싱글보드 3은 분산모드 </li>
+<li>dfs.replication의 1의 값은 싱글보드 3은 분산모드 </li>
 
 
   <h4>hadoop start</h4>
