@@ -4,11 +4,11 @@
 
 sudo nano /etc/network/interfaces
 
-  1.내 ip및 네트워크 설정
-  2.만약 회사나 교육용 컴퓨터일 시 -> gateway로 작성
-  3.내 개인 노트북이면 -> boradcast로 작성
-  4.dns-nameserver 8.8.8.8 8.8.4.4 
-  이 dns는 구글의 무료 dns주소로 기관에서 따로 지정해주지 않으면이 dns로 설정
+    1.내 ip및 네트워크 설정
+    2.만약 회사나 교육용 컴퓨터일 시 -> gateway로 작성
+    3.내 개인 노트북이면 -> boradcast로 작성
+    4.dns-nameserver 8.8.8.8 8.8.4.4 
+    이 dns는 구글의 무료 dns주소로 기관에서 따로 지정해주지 않으면이 dns로 설정
     
  
   
