@@ -83,16 +83,16 @@ sudo nano /etc/resolv.conf(nameserver는 위와 동일하게 작성)
 
   <h4>core-site 설정</h4>
 
-   sudo chwon -R manager:hadoop /usr/local/hadoop/tmp/ (이 경로에 있는 파일들을 읽을 수 있는 권한 부여)
+    sudo chwon -R manager:hadoop /usr/local/hadoop/tmp/ (이 경로에 있는 파일들을 읽을 수 있는 권한 부여)
 
-   sudo nano /usr/local/hadoop/etc/hadoop/core-site.xml(분산 컴퓨팅을 구현하기 위한 manager의 ip와 port를 설정)
+    sudo nano /usr/local/hadoop/etc/hadoop/core-site.xml(분산 컴퓨팅을 구현하기 위한 manager의 ip와 port를 설정)
 
 ![core-site설정](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/718ad199-343f-4857-82a4-bdf6d1b5240e)
 
 
   <h4>mapred-site 설정</h4>
 
-   sudo nano /usr/local/hadoop/etc/hadoop/mapred-site.xml(core-site와 동일)
+    sudo nano /usr/local/hadoop/etc/hadoop/mapred-site.xml(core-site와 동일)
 
 ![mapred-site 설정](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/c57651c4-e1af-479c-8074-e036eaa4e377)
 
