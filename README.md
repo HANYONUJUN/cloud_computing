@@ -32,7 +32,7 @@
 
    <li>내 ip로 xshell과 연동가능</li>
 
-        ![xshell 연동성공](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/1edd763f-917e-4da6-9210-e039d28070c4)
+        (https://github.com/HANYONUJUN/cloud_computing/assets/104452243/1edd763f-917e-4da6-9210-e039d28070c4)
 
 
    <h4>java 설치</h4>
