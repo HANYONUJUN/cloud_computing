@@ -4,13 +4,12 @@
 
     sudo nano /etc/network/interfaces
 
-    
     1.내 ip및 네트워크 설정
-    2.만약 회사나 교육용 컴퓨터일 시 -> gateway로 작성</li> <br>
-    3.내 개인 노트북이면 -> boradcast로 작성</li> <br>
-    4.dns-nameserver 8.8.8.8 8.8.4.4 <br> 
-      이 dns는 구글의 무료 dns주소로 기관에서 따로 지정해주지 않으면이 dns로 설정
-     </li>
+    2.만약 회사나 교육용 컴퓨터일 시 -> gateway로 작성
+    3.내 개인 노트북이면 -> boradcast로 작성
+    4.dns-nameserver 8.8.8.8 8.8.4.4 
+    이 dns는 구글의 무료 dns주소로 기관에서 따로 지정해주지 않으면이 dns로 설정
+    
  
   
 <h4>DNS설정</h4>
@@ -107,7 +106,18 @@
 <li>dfs.repication의 1의 값은 싱글보드 3은 분산모드 </li>
 
 
-    
+  <h4>hadoop start</h4>
+
+          hadoop namenode –format
+          start-dfs.sh(hadoop 실행 , 멈춤은 stop-all.sh)
+![하둡실행](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/2d2e35ea-68a2-4913-af36-ab1034ae0038)
+
+          jps(실행상태 출력)
+![프로세스 상태 확인](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/efd6667a-4506-4212-a6a2-2781a4de592f)
+<li>여기 실행 상태 중 jps를 제외한 나머지가 하나라도 실행을 안할 시 설정이 잘못된 것으로 반드시 수정해줘야 함(hdfs-site 부분으로 생각)</li>
+<li>왜냐하면 hadoop이 정상 실행이 되지 않는 것으로 hadoop명령어를 사용할 시 연결이 거부됨</li>
+         
+          
 
     
             
