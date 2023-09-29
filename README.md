@@ -14,10 +14,10 @@
   
 <h4>DNS설정</h4>
 
-    sudo nano /etc/resolv.conf
+    sudo nano /etc/resolv.conf(nameserver는 위와 동일하게 작성)
    
 
- <li>nameserver 위 내용이랑 똑같이 작성</li>
+ 
 
    <li> dns 동작 확인</li>
 
@@ -32,6 +32,8 @@
 
    <li>내 ip로 xshell과 연동가능</li>
 
+        ![xshell 연동성공](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/1edd763f-917e-4da6-9210-e039d28070c4)
+
 
    <h4>java 설치</h4>
 
@@ -41,5 +43,41 @@
        sudo nano /etc/profile(export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 파일 밑에 설정)
        source /etc/profile
 
-    
+
+   <h4>hadoop 설치</h4>
+
+        wget http://apache.mirror.cdnetworks.com/hadoop/common/hadoop-2.9.2/hadoop-2.9.2.tar.gz
+        tar zxvf hadoop-2.9.2.tar.gz
+        sudo cp -rf hadoop-2.9.2 /usr/local/hadoop
+        rm -rf hadoop-2.9.2(용량을 위해 지움)
+
+
+   <h4>하둡 사용자 등록 및 하둡 소유권 변경</h4>
+
+
+           sudo add grouop hadoop
+           sudo adduser --ingroup hadoop manager(manager란 이름으로 사용자 등록)
+           sudo adduser manager sudo(사용자를 sudo 그룹에 추가)
+
+           sudo chown -R manager:hadoop /usr/local/hadoop (소유가가 하위 디렉토리 읽기 권한 부여)
+           ls -l /usr/local(파일 목록 확인)
+
+
+   <h4>하둡 환경 설정</h4>
    
+            sudo su - manager(manager 사용자로 root변경)
+            ![manager변경](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/7965704e-c41e-4536-bde4-f63bf220270d)
+
+            nano /.bashrc(여기서 하둡에 대한 환경변수들을 설정)
+            export HADOOP_HOME=/usr/local/hadoop
+            export PATH=$PATH:$HADOOP_HOME/bin
+            export PATH=$PATH:$HADOOP_HOME/sbin
+            export HADOOP_MAPRED_HOME=$HADOOP_HOME
+            export HADOOP_COMMON_HOME=$HADOOP_HOME
+            export HADOOP_HDFS_HOME=$HADOOP_HOME
+            source ~/.bashrc(내용을 업데이트 했다고 알려주는 명령어)
+
+  
+
+    
+            
