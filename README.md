@@ -32,7 +32,8 @@
 
    <li>내 ip로 xshell과 연동가능</li>
 
-        (https://github.com/HANYONUJUN/cloud_computing/assets/104452243/1edd763f-917e-4da6-9210-e039d28070c4)
+![xshell 연동성공](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/972e7324-1711-4a29-b6d0-3e750ab4303b)
+
 
 
    <h4>java 설치</h4>
@@ -66,7 +67,7 @@
    <h4>하둡 환경 설정</h4>
    
             sudo su - manager(manager 사용자로 root변경)
-            ![manager변경](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/7965704e-c41e-4536-bde4-f63bf220270d)
+![manager변경](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/7965704e-c41e-4536-bde4-f63bf220270d)
 
             nano /.bashrc(여기서 하둡에 대한 환경변수들을 설정)
             export HADOOP_HOME=/usr/local/hadoop
@@ -75,9 +76,37 @@
             export HADOOP_MAPRED_HOME=$HADOOP_HOME
             export HADOOP_COMMON_HOME=$HADOOP_HOME
             export HADOOP_HDFS_HOME=$HADOOP_HOME
+            
             source ~/.bashrc(내용을 업데이트 했다고 알려주는 명령어)
 
-  
+
+  <h4>core-site 설정</h4>
+
+          sudo chwon -R manager:hadoop /usr/local/hadoop/tmp/ (이 경로에 있는 파일들을 읽을 수 있는 권한 부여)
+
+          sudo nano /usr/local/hadoop/etc/hadoop/core-site.xml(분산 컴퓨팅을 구현하기 위한 manager의 ip와 port를 설정)
+
+![core-site설정](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/718ad199-343f-4857-82a4-bdf6d1b5240e)
+
+
+  <h4>mapred-site 설정</h4>
+
+           sudo nano /usr/local/hadoop/etc/hadoop/mapred-site.xml(core-site와 동일)
+
+![mapred-site 설정](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/c57651c4-e1af-479c-8074-e036eaa4e377)
+
+   <h4>hdfs-site 설정</h4>
+
+           $ sudo mkdir -p /usr/local/hadoop/hdfs/namenode
+           $ sudo mkdir -p /usr/local/hadoop/hdfs/datanode
+           $ sudo chown -R manager:hadoop /usr/local/hadoop/hdfs
+           $ sudo nano /usr/local/hadoop/etc/hadoop/hdfs-site.xml
+
+![hdfs-site 설정](https://github.com/HANYONUJUN/cloud_computing/assets/104452243/a5229142-bea5-480e-8daf-bae13c8ef27d)
+<li>dfs.repication의 1의 값은 싱글보드 3은 분산모드 </li>
+
+
+    
 
     
             
